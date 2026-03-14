@@ -1,0 +1,96 @@
+/* ===========================
+   ANIMATIONS
+=========================== */
+
+/* Scroll reveal base state */
+.reveal-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+  transition-delay: var(--delay, 0s);
+}
+
+.reveal-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Blink cursor */
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Scroll line pulse */
+@keyframes scrollPulse {
+  0%, 100% { opacity: 1; transform: scaleY(1); }
+  50% { opacity: 0.4; transform: scaleY(0.7); }
+}
+
+/* Grid shimmer */
+@keyframes gridShimmer {
+  0% { opacity: 0.5; }
+  50% { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+/* Glow pulse on accent elements */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 10px rgba(0,229,255,0.2); }
+  50% { box-shadow: 0 0 25px rgba(0,229,255,0.5); }
+}
+
+.timeline-dot {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* Fade-in for page load */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+body {
+  animation: fadeIn 0.4s ease;
+}
+
+/* Skill pill hover ripple */
+.skill-pill {
+  position: relative;
+  overflow: hidden;
+}
+
+.skill-pill::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(0,229,255,0.15) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.skill-pill:hover::before {
+  opacity: 1;
+}
+
+/* Card scan line effect */
+.project-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), transparent);
+  transition: left 0.5s ease;
+}
+
+.project-card {
+  position: relative;
+}
+
+.project-card:hover::before {
+  left: 100%;
+}
+
+/* Stat counter animation handled in JS */

@@ -1,0 +1,183 @@
+/* ===========================
+   LAYOUT
+=========================== */
+
+/* Container */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Sections */
+.section {
+  padding: var(--section-pad);
+}
+
+.section-alt {
+  background: var(--bg-secondary);
+}
+
+/* Section Labels */
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--accent);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.section-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1.1;
+  margin-bottom: 3rem;
+}
+
+/* ===========================
+   HERO LAYOUT
+=========================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 7rem 2rem 5rem;
+}
+
+.hero-content {
+  max-width: 780px;
+  z-index: 2;
+  position: relative;
+}
+
+/* ===========================
+   ABOUT LAYOUT
+=========================== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.about-text p {
+  color: var(--text-secondary);
+  margin-bottom: 1.2rem;
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+.about-text strong {
+  color: var(--text-primary);
+}
+
+.about-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+}
+
+/* ===========================
+   PROJECTS LAYOUT
+=========================== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.projects-more {
+  text-align: center;
+}
+
+/* ===========================
+   SKILLS LAYOUT
+=========================== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+/* ===========================
+   TIMELINE LAYOUT
+=========================== */
+.timeline {
+  position: relative;
+  padding-left: 2.5rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--accent), transparent);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 3rem;
+  padding-left: 2rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2.5rem;
+  top: 0.25rem;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 2px solid var(--accent);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+.timeline-dot--accent {
+  background: var(--accent);
+}
+
+/* ===========================
+   CONTACT LAYOUT
+=========================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 3rem;
+}
+
+.contact-sub {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 540px;
+  margin-bottom: 3rem;
+  line-height: 1.8;
+}
+
+.contact-cta {
+  text-align: center;
+}
+
+/* ===========================
+   NOISE OVERLAY
+=========================== */
+.noise-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.025;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 128px;
+}

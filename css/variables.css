@@ -1,0 +1,38 @@
+/* ===========================
+   DESIGN TOKENS / VARIABLES
+=========================== */
+:root {
+  /* Colors */
+  --bg-primary:    #0a0a0f;
+  --bg-secondary:  #0f0f18;
+  --bg-card:       #111120;
+  --bg-card-hover: #161628;
+
+  --accent:        #00e5ff;
+  --accent-dim:    rgba(0, 229, 255, 0.12);
+  --accent-glow:   rgba(0, 229, 255, 0.25);
+
+  --text-primary:  #e8eaf0;
+  --text-secondary:#8892a4;
+  --text-muted:    #4a5568;
+
+  --border:        rgba(255, 255, 255, 0.07);
+  --border-accent: rgba(0, 229, 255, 0.35);
+
+  /* Typography */
+  --font-heading:  'Syne', sans-serif;
+  --font-mono:     'Space Mono', monospace;
+  --font-body:     'DM Sans', sans-serif;
+
+  /* Spacing */
+  --section-pad:   6rem 0;
+  --container-max: 1100px;
+
+  /* Transitions */
+  --transition:    all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* Shadows */
+  --shadow-card:   0 4px 32px rgba(0, 0, 0, 0.5);
+  --shadow-accent: 0 0 24px rgba(0, 229, 255, 0.2);
+}
